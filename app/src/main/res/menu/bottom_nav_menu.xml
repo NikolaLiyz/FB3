@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_control"
+        android:icon="@drawable/ic_control"
+        android:title="移动控制" />
+
+    <item
+        android:id="@+id/navigation_graph"
+        android:icon="@drawable/ic_graph"
+        android:title="地图显示" />
+
+    <item
+        android:id="@+id/navigation_agv_state"
+        android:icon="@drawable/ic_agv_state"
+        android:title="运行状态" />
+
+</menu>

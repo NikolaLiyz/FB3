@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleGroupHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="使能" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/returnToZero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="回零" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="取消" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/toggleGroupHorizontal"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/speed_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleGroupHorizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/decreseSpeed"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_decrease" />
+
+        <TextView
+            android:id="@+id/currentSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="0.0"
+            android:textColor="@color/primary_dark"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="m/s"
+            android:textColor="@color/primary_dark"
+            android:textSize="24dp" />
+
+        <ImageButton
+            android:id="@+id/speedIncrease"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_increase" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/direction_control"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/speed_set"
+        android:layout_marginBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/agv_stop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_stop"
+            android:background="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/agv_left_moving"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toLeftOf="@+id/agv_stop"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_left"
+            android:background="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/agv_right_moving"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/agv_stop"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right"
+            android:background="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/agv_up_moving"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@+id/agv_stop"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_up"
+            android:background="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/agv_down_moving"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/agv_stop"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_down"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/direction_control"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/counterclockwise"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:src="@drawable/counterclockwise" />
+
+        <ImageButton
+            android:id="@+id/clockwise"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="150dp"
+            android:background="@color/white"
+            android:src="@drawable/clockwise" />
+
+    </LinearLayout>
+
+</RelativeLayout>
